@@ -1,7 +1,7 @@
 import { resultView } from "../views/result.js";
 import { page,render } from "./lib.js";
 
-const root = document.querySelector('body');
+const root = document.getElementById('root');
 document.querySelector('form').addEventListener('submit', onSubmit);
 
 page(decorateContext);
