@@ -42,7 +42,7 @@ function onSubmit(e){
     const fuelConsumption = ((Number(consumption) * Number(distance)) / 100).toFixed(2);
     const litersFuelPerGallon = fuelConsumption / Number(gallons)
     const carbonFootPrint = litersFuelPerGallon * fuel
-    const kgCO2PerGallon = (Number(consumption) * Number(distance) * Number(fuelEm)) / (100 * gallons)
+    const kgCO2PerGallon = (Number(consumption) * Number(distance) * Number(fuel)) / (100 * gallons)
     const result = (kgCO2PerGallon * Number(gallons)).toFixed(2)
     const data = {
         gallons,
