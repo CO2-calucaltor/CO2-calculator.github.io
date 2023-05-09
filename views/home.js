@@ -51,6 +51,6 @@ function onSubmit(e){
         fuelConsumption
     };
     sessionStorage.setItem('userData',JSON.stringify(data))
-    page.redirect('/result')
+    page.redirect('/CO2-calculator.github.io/result')
     document.querySelector('form').reset()
 }
