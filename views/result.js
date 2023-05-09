@@ -1,7 +1,7 @@
 import { html, page } from "../src/lib.js";
 
 const loadingTemplate = () => html`
-<div class="lds-heart">loading<div></div></div>
+<div class="lds-heart"><div></div></div>
 `
 const resultTemplate = (item,onClick) => html`
 <h1>Results</h1>
@@ -11,7 +11,7 @@ const resultTemplate = (item,onClick) => html`
         <h3>Total Carbon Footprint</h3>
         <input type="text" value="${`${item.result}kg CO2`}" disabled>
         <h3>Vehicle information</h3>
-        <dl>Fuel: ${item.fuel}<br>Fuel Consumption: ${item.fuelConsumption}L</dl>
+        <dl>Fuel: ${item.fuelText}<br>Fuel Consumption: ${item.fuelConsumption}L</dl>
         <button @click=${onClick} >New Calculation</button>
     </div>
 `
@@ -22,6 +22,6 @@ export function resultView(ctx) {
     ctx.render(loadingTemplate())
     setTimeout(() => {ctx.render(resultTemplate(result,onClick))},3000)
     function onClick() {
-        page.redirect('/')
+        page.redirect('/CO2-calculator/')
     }
 }
