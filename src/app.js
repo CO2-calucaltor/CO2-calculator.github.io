@@ -5,7 +5,8 @@ import { page,render } from "./lib.js";
 const root = document.getElementById('root');
 
 page(decorateContext);
-page('/CO2-calculator.github.io/' , homeView);
+page('/CO2-calculator.github.io/' , '/');
+page('/', homeView);
 page('/result' , resultView);
 page.start();
 
